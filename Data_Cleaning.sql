@@ -30,7 +30,7 @@ SELECT *
 FROM worldlifeexpectancy
 WHERE status = '';
 
-                  
+#Filling in missing values with data           
 UPDATE worldlifeexpectancy t1
 JOIN worldlifeexpectancy t2
 	ON t1.Country = t2.Country
@@ -54,6 +54,7 @@ WHERE status = '';
 SELECT *
 FROM worldlifeexpectancy;
 
+#Taking Averages of preious year and future year to create an average for missing life expectancies
 SELECT * 
 FROM worldlifeexpectancy
 WHERE `Life expectancy` = '';
